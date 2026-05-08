@@ -709,22 +709,7 @@ body {
 }
 
 .preloader-logo {
-  text-align: center;
-  margin-bottom: 20px;
-  animation: pulseLogo 1.5s ease-in-out infinite;
-}
-
-.preloader-logo img {
-  border-radius: 50%;
-  box-shadow: 0 0 30px rgba(233,69,96,0.2);
-}
-
-.preloader-img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid rgba(233,69,96,0.3);
+  display: none;
 }
 
 @keyframes pulseLogo {
@@ -926,4 +911,22 @@ body {
 .fade-in-scroll.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ===== CORNER LOGO ===== */
+.corner-logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.corner-logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(233,69,96,0.3);
+  box-shadow: 0 0 20px rgba(233,69,96,0.15);
 }
