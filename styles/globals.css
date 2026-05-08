@@ -718,6 +718,14 @@ body {
   box-shadow: 0 0 30px rgba(233,69,96,0.2);
 }
 
+.preloader-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(233,69,96,0.3);
+}
+
 @keyframes pulseLogo {
   0%, 100% { transform: scale(1); opacity: 0.8; }
   50% { transform: scale(1.1); opacity: 1; }
