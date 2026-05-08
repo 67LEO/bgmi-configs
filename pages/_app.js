@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import '../styles/globals.css'
+import Preloader from '../components/Preloader'
 
 export default function App({ Component, pageProps }) {
   return (
@@ -16,6 +17,7 @@ export default function App({ Component, pageProps }) {
           `
         }} />
       </Head>
+      <Preloader />
       <Component {...pageProps} />
     </>
   )

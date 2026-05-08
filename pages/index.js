@@ -34,24 +34,49 @@ export default function Home() {
       </Head>
 
       <AdPopunder />
-      <div className="bg-grid" />
-      <div className="bg-glow bg-glow-1" />
-      <div className="bg-glow bg-glow-2" />
 
-      <section className="hero">
-        <div className="hero-content">
-          <div className="hero-badge">🔥 5000+ Downloads</div>
-          <h1>Dominate BGMI<br />with Pro Configs</h1>
-          <p>Download hand-picked sensitivity settings, zero recoil configs, and pro player setups. Updated for BGMI 4.4.</p>
-          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="#configs" className="btn btn-primary">
+      {/* Hero Section with Video Background */}
+      <section className="hero-video-section">
+        <div className="hero-video-wrap">
+          <video autoPlay muted loop playsInline className="hero-video">
+            <source src="https://res.cloudinary.com/dm2hjn5wp/video/upload/q_auto/f_auto/v1778224187/ezgif-1618569234cc187f_qjeivj.mp4" type="video/mp4" />
+          </video>
+          <div className="hero-video-overlay" />
+        </div>
+
+        <div className="hero-video-content">
+          <div className="hero-video-badge">
+            <span className="badge-dot" />
+            Pro Configs
+          </div>
+          <h1 className="hero-video-title">
+            Dominate the<br />
+            <span className="text-gradient">Battleground</span>
+          </h1>
+          <p className="hero-video-desc">
+            Hand-picked BGMI 4.4 sensitivity settings, zero recoil configs, and pro player setups.
+            Download and elevate your gameplay.
+          </p>
+          <div className="hero-video-actions">
+            <a href="#configs" className="btn btn-primary btn-lg">
               Browse Configs ↓
+            </a>
+            <a href="/admin/login" className="btn btn-outline btn-lg">
+              Admin → 
             </a>
           </div>
           <div className="hero-stats">
             <div className="hero-stat">
               <div className="hero-stat-value">{configs.length}+</div>
               <div className="hero-stat-label">Configs</div>
+            </div>
+            <div className="hero-stat">
+              <div className="hero-stat-value">100%</div>
+              <div className="hero-stat-label">Free</div>
+            </div>
+            <div className="hero-stat">
+              <div className="hero-stat-value">4.4</div>
+              <div className="hero-stat-label">Latest Version</div>
             </div>
           </div>
         </div>
