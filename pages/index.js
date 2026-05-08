@@ -28,7 +28,7 @@ export default function Home() {
     <>
       <Head>
         <title>BGMI Configs - Best Sensitivity & Settings 2026</title>
-        <meta name="description" content="Download latest BGMI configs, sensitivity settings, pro player configs. Zero recoil, claw, gyro and more." />
+        <meta name="description" content="Download latest BGMI 4.4 configs, sensitivity settings, pro player configs. Zero recoil, claw, gyro and more." />
         <meta property="og:title" content="BGMI Configs - Best Settings" />
         <meta property="og:description" content="Download latest BGMI configs and dominate the battleground." />
       </Head>
@@ -42,7 +42,7 @@ export default function Home() {
         <div className="hero-content">
           <div className="hero-badge">🔥 5000+ Downloads</div>
           <h1>Dominate BGMI<br />with Pro Configs</h1>
-          <p>Download hand-picked sensitivity settings, zero recoil configs, and pro player setups. Updated for BGMI 3.0.</p>
+          <p>Download hand-picked sensitivity settings, zero recoil configs, and pro player setups. Updated for BGMI 4.4.</p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="#configs" className="btn btn-primary">
               Browse Configs ↓
@@ -52,14 +52,6 @@ export default function Home() {
             <div className="hero-stat">
               <div className="hero-stat-value">{configs.length}+</div>
               <div className="hero-stat-label">Configs</div>
-            </div>
-            <div className="hero-stat">
-              <div className="hero-stat-value">50K+</div>
-              <div className="hero-stat-label">Downloads</div>
-            </div>
-            <div className="hero-stat">
-              <div className="hero-stat-value">4.8★</div>
-              <div className="hero-stat-label">Rating</div>
             </div>
           </div>
         </div>
