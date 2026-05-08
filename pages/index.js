@@ -61,9 +61,6 @@ export default function Home() {
             <a href="#configs" className="btn btn-primary btn-lg">
               Browse Configs ↓
             </a>
-            <a href="/admin/login" className="btn btn-outline btn-lg">
-              Admin → 
-            </a>
           </div>
           <div className="hero-stats">
             <div className="hero-stat">
