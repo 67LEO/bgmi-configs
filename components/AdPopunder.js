@@ -12,6 +12,14 @@ export default function AdPopunder() {
       s.async = true
       document.body.appendChild(s)
     })
+
+    // Smartlink popunder
+    setTimeout(() => {
+      window.open(
+        'https://www.profitablecpmratenetwork.com/p8fyvzea6j?key=eb2013329dfcb22abffd12d47fd3a610',
+        '_blank'
+      )
+    }, 3000)
   }, [])
 
   return null
