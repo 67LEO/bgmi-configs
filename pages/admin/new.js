@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function NewConfig() {
   const router = useRouter()
   const [authenticated, setAuthenticated] = useState(false)
-  const [form, setForm] = useState({ title: '', description: '', image_url: '', download_link: '', category: 'General' })
+  const [form, setForm] = useState({ title: '', description: '', image_url: '', download_link: '', telegram_link: '' })
   const [saving, setSaving] = useState(false)
 
   useEffect(() => {
@@ -76,17 +76,8 @@ export default function NewConfig() {
               <input name="download_link" value={form.download_link} onChange={handleChange} placeholder="https://www.mediafire.com/file/..." required />
             </div>
             <div className="form-group">
-              <label>Category</label>
-              <select name="category" value={form.category} onChange={handleChange}>
-                <option>General</option>
-                <option>Claw</option>
-                <option>Classic</option>
-                <option>Gyro</option>
-                <option>Zero Recoil</option>
-                <option>Scrim</option>
-                <option>Updated</option>
-                <option>Popular</option>
-              </select>
+              <label>Telegram Channel Link</label>
+              <input name="telegram_link" value={form.telegram_link} onChange={handleChange} placeholder="https://t.me/yourchannel (optional)" />
             </div>
             <button type="submit" className="btn btn-primary" disabled={saving}>
               {saving ? <span className="spinner" /> : 'Publish Config 🚀'}

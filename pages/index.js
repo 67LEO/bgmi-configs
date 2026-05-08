@@ -20,7 +20,7 @@ export default function Home() {
     ? configs.filter(c =>
         c.title.toLowerCase().includes(search.toLowerCase()) ||
         (c.description && c.description.toLowerCase().includes(search.toLowerCase())) ||
-        (c.category && c.category.toLowerCase().includes(search.toLowerCase()))
+        (c.telegram_link && c.telegram_link.toLowerCase().includes(search.toLowerCase()))
       )
     : configs
 
@@ -120,7 +120,7 @@ export default function Home() {
                     <h3>{config.title}</h3>
                     {config.description && <p>{config.description}</p>}
                     <div className="config-card-footer">
-                      <span className="config-card-category">{config.category}</span>
+                      {config.telegram_link && <span className="config-card-category">📢 Telegram</span>}
                       <span className="config-card-downloads">⬇ {config.downloads || 0}</span>
                     </div>
                   </div>

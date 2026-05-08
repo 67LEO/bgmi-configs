@@ -66,9 +66,13 @@ export default function ConfigDetail() {
             )}
             <h1 className="detail-title">{config.title}</h1>
             <div className="detail-meta">
-              <span>📂 {config.category}</span>
               <span>⬇️ {config.downloads || 0} downloads</span>
             </div>
+            {config.telegram_link && (
+              <a href={config.telegram_link} target="_blank" rel="noopener" className="btn btn-secondary" style={{ marginBottom: 24, textDecoration: 'none', display: 'inline-flex', gap: 8, padding: '10px 20px', borderRadius: 10, background: 'rgba(79, 195, 247, 0.1)', color: '#4fc3f7', border: '1px solid rgba(79, 195, 247, 0.2)', fontSize: '0.9rem', fontWeight: 600 }}>
+                📢 Join Telegram Channel
+              </a>
+            )}
             {config.description && (
               <p className="detail-description">{config.description}</p>
             )}

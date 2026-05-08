@@ -74,7 +74,7 @@ export default function AdminDashboard() {
               <thead>
                 <tr>
                   <th>Title</th>
-                  <th>Category</th>
+                  <th>Telegram</th>
                   <th>Downloads</th>
                   <th>Created</th>
                   <th>Actions</th>
@@ -84,7 +84,7 @@ export default function AdminDashboard() {
                 {configs.map(c => (
                   <tr key={c.id}>
                     <td style={{ fontWeight: 600 }}>{c.title}</td>
-                    <td><span className="config-card-category">{c.category}</span></td>
+                    <td>{c.telegram_link ? <a href={c.telegram_link} target="_blank" style={{color:'#4fc3f7', fontSize:'0.85rem'}}>🔗 Telegram</a> : '-'}</td>
                     <td>{c.downloads || 0}</td>
                     <td>{new Date(c.created_at).toLocaleDateString()}</td>
                     <td>

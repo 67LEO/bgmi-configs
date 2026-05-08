@@ -14,7 +14,7 @@ export default async function handler(req, res) {
   }
 
   if (req.method === 'PUT') {
-    const { title, description, image_url, download_link, category, downloads } = req.body
+    const { title, description, image_url, download_link, telegram_link, downloads } = req.body
     try {
       let result
       if (downloads !== undefined) {
@@ -24,8 +24,8 @@ export default async function handler(req, res) {
         )
       } else {
         result = await query(
-          `UPDATE configs SET title=$1, description=$2, image_url=$3, download_link=$4, category=$5, updated_at=NOW() WHERE id=$6 RETURNING *`,
-          [title, description, image_url, download_link, category, id]
+          `UPDATE configs SET title=$1, description=$2, image_url=$3, download_link=$4, telegram_link=$5, updated_at=NOW() WHERE id=$6 RETURNING *`,
+          [title, description, image_url, download_link, telegram_link || '', id]
         )
       }
       if (result.rows.length === 0) return res.status(404).json({ error: 'Not found' })
