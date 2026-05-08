@@ -709,9 +709,13 @@ body {
 }
 
 .preloader-logo {
-  font-size: 4rem;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   animation: pulseLogo 1.5s ease-in-out infinite;
+}
+
+.preloader-logo img {
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(233,69,96,0.2);
 }
 
 @keyframes pulseLogo {
