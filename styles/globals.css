@@ -709,6 +709,7 @@ body {
 }
 
 .preloader-logo {
+  text-align: center;
   margin-bottom: 20px;
   animation: pulseLogo 1.5s ease-in-out infinite;
 }
